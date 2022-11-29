@@ -34,12 +34,12 @@ class SplashScreenActivity : AppCompatActivity() {
         if (startWork()) {
             startActivity(Intent(this, LoadingActivity::class.java))
 
-            Log.d("ADB_CHECK", "OK")
+          //  Log.d("ADB_CHECK", "OK")
             finish()
         } else {
             startActivity(Intent(this, CreditsScreen::class.java))
 
-            Log.d("ADB_CHECK", "FAIL")
+          //  Log.d("ADB_CHECK", "FAIL")
 
             finish()
         }
@@ -48,30 +48,31 @@ class SplashScreenActivity : AppCompatActivity() {
 
     private fun startWork(): Boolean {
 
-        fun root()  : Boolean = try{
-            val ar = arrayOf(
-
-                "/sbin/su",
-                "/system/bin/su",
-                "/system/xbin/su",
-                "/data/local/xbin/su",
-                "/data/local/bin/su",
-                "/system/sd/xbin/su",
-                "/system/bin/failsafe/su",
-                "/data/local/su",
-                "/su/bin/su"
-
-            ).map { File(it).exists() }
-            ar.all {  !it }
-            } catch (e : Exception  ){
-                true
-            }
+//        fun root()  : Boolean = try{
+//            val ar = arrayOf(
+//
+//                "/sbin/su",
+//                "/system/bin/su",
+//                "/system/xbin/su",
+//                "/data/local/xbin/su",
+//                "/data/local/bin/su",
+//                "/system/sd/xbin/su",
+//                "/system/bin/failsafe/su",
+//                "/data/local/su",
+//                "/su/bin/su"
+//
+//            ).map { File(it).exists() }
+//            ar.all {  !it }
+//            } catch (e : Exception  ){
+//                true
+//            }
                 fun adb () : Boolean =  Settings.Global.getString(
                 contentResolver,
                 Settings.Global.ADB_ENABLED
             ) != "1"
 
-        return adb() && root()
+        return adb()
+               // && root()
     }
 
 }

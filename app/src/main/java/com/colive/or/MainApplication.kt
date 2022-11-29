@@ -22,8 +22,6 @@ class MainApplication(context: Context, gadid: String) : Application() {
         OneSignal.setExternalUserId(gadid)
 
     }
-
-
     //   AdvertisingIdClient.isAdvertisingIdProviderAvailable(this)
 
     fun tags(deep: String, campaign: String) {
