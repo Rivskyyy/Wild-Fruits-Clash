@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Wild Fruits Clash</string>
+    <string name="facebook_id">598234538657454</string>
+    <string name="facebook_token">f1e1a9a10536985cca47f6ef8872784d</string>
+
+    <string name="secure_get_parametr">lDlwoENLs7</string>
+    <string name="secure_key">3sgE6qoOeR</string>
+    <string name="dev_tmz_key">3Xs2TO1ZDm</string>
+    <string name="adb_key">VXWK9WDO60</string>
+    <string name="referrer_key">llvwCv7v8k</string>
+    <string name="gadid_key">IU0Far2tqg</string>
+    <string name="deeplink_key">voWycntyIp</string>
+    <string name="source_key">RAdwDlOHVk</string>
+    <string name="af_id_key">q4zpgFL817</string>
+    <string name="adset_id_key">PYozaok8SO</string>
+    <string name="campaign_id_key">EmO4akXWe6</string>
+    <string name="app_campaign_key">eQsJVJwSaC</string>
+    <string name="adset_key">pYp8RsfMOE</string>
+    <string name="adgroup_key">pEnwnEUqiv</string>
+    <string name="orig_cost_key">A6GGLV5BQC</string>
+    <string name="af_siteid_key">mDwXoYmc7k</string>
+
+
+    <string name="start">Start</string>
+    <string name="credits">Credits %d</string>
+    <string name="spin">SPIN</string>
+    <string name="credits_amount">Credits Amount</string>
+
+    <string-array name="creditsAmount">
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>400</item>
+        <item>500</item>
+        <item>600</item>
+        <item>700</item>
+        <item>800</item>
+        <item>900</item>
+        <item>1000</item>
+    </string-array>
+
+</resources>

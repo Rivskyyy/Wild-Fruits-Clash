@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ikise/AndroidStudioProjects/WildFruitsClash/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1935" />
+        <entry key="..\:/Users/ikise/AndroidStudioProjects/WildFruitsClash/app/src/main/res/drawable/bg_gradient.xml" value="0.1935" />
+        <entry key="..\:/Users/ikise/AndroidStudioProjects/WildFruitsClash/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1935" />
+        <entry key="..\:/Users/ikise/AndroidStudioProjects/WildFruitsClash/app/src/main/res/drawable/splash.xml" value="0.1935" />
+        <entry key="..\:/Users/ikise/AndroidStudioProjects/WildFruitsClash/app/src/main/res/drawable/splash_background.xml" value="0.1935" />
+        <entry key="..\:/Users/ikise/AndroidStudioProjects/WildFruitsClash/app/src/main/res/font/font1.xml" value="0.23333333333333334" />
+        <entry key="..\:/Users/ikise/AndroidStudioProjects/WildFruitsClash/app/src/main/res/layout-land/loading_activity.xml" value="0.1728395061728395" />
+        <entry key="..\:/Users/ikise/AndroidStudioProjects/WildFruitsClash/app/src/main/res/layout/activity_credits_screen.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ikise/AndroidStudioProjects/WildFruitsClash/app/src/main/res/layout/activity_game_fruits_clash.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ikise/AndroidStudioProjects/WildFruitsClash/app/src/main/res/layout/activity_loading.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ikise/AndroidStudioProjects/WildFruitsClash/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ikise/AndroidStudioProjects/WildFruitsClash/app/src/main/res/layout/activity_splash_screen.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ikise/AndroidStudioProjects/WildFruitsClash/app/src/main/res/layout/activity_web_view.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ikise/AndroidStudioProjects/WildFruitsClash/app/src/main/res/layout/loading_activity.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ikise/AndroidStudioProjects/WildFruitsClash/app/src/main/res/layout/spinner.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ikise/AndroidStudioProjects/WildFruitsClash/app/src/main/res/layout/spinner_dropdown_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ikise/AndroidStudioProjects/WildFruitsClash/app/src/main/res/layout/spinner_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ikise/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_dropdown_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ikise/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_item.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
