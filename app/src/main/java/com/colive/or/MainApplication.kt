@@ -22,16 +22,21 @@ class MainApplication(context: Context, gadid: String) : Application() {
         OneSignal.setExternalUserId(gadid)
 
     }
-    //   AdvertisingIdClient.isAdvertisingIdProviderAvailable(this)
 
     fun tags(deep: String, campaign: String) {
-        if (campaign == "null" && deep == "null"){
-            OneSignal.sendTag("key2", "organic")
-        } else if ( deep != "null"){
-            OneSignal.sendTag("key2", deep.replace("myapp://", "").substringBefore("/"))
-        } else if (campaign != "null"){
-            OneSignal.sendTag("key2", campaign.substringBefore("_"))
+
+        when {
+            deep != "null" ->{
+                OneSignal.sendTag("key2",  deep.replace("myapp://", "").substringBefore("/"))
+            }
+            campaign != "null" -> {
+                OneSignal.sendTag("key2", campaign.substringBefore("_"))            }
+            deep != "null" && campaign != "null" -> {
+                OneSignal.sendTag("key2", "organic")
+            }
+
         }
+
     }
 
     private fun determineAdvertisingInfo() {

@@ -31,18 +31,18 @@ class SplashScreenActivity : AppCompatActivity() {
 //            ).any { File(it).exists() } && Settings.Global.getString(contentResolver,
 //                Settings.Global.ADB_ENABLED) != "1" )
 //        {
-        if (startWork()) {
+//        if (startWork()) {
             startActivity(Intent(this, LoadingActivity::class.java))
 
           //  Log.d("ADB_CHECK", "OK")
             finish()
-        } else {
-            startActivity(Intent(this, CreditsScreen::class.java))
-
-          //  Log.d("ADB_CHECK", "FAIL")
-
-            finish()
-        }
+//        } else {
+//            startActivity(Intent(this, CreditsScreen::class.java))
+//
+//          //  Log.d("ADB_CHECK", "FAIL")
+//
+//            finish()
+//        }
 
     }
 

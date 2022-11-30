@@ -27,7 +27,6 @@ class   LoadingActivity : AppCompatActivity() {
         setContentView(R.layout.loading_activity)
         animLoad()
 
-
         val factory =  Factory( application as App, appflow(), deepFlow())
         val fruitView  = ViewModelProvider(this, factory)[ViewModelFruitsClash::class.java]
         fruitView.fData.observe(this) {
@@ -35,10 +34,7 @@ class   LoadingActivity : AppCompatActivity() {
             intent.putExtra("fruits_data", it)
             startActivity(intent)
             finish()
-
-
         }
-
     }
     @Suppress("DEPRECATION")
     private fun animLoad() {
@@ -67,6 +63,7 @@ class   LoadingActivity : AppCompatActivity() {
             override fun onAttributionFailure(p0: String?) {}
 
         }
+
         AppsFlyerLib.getInstance().init(APP_ID, conversionDataListener, this@LoadingActivity)
         AppsFlyerLib.getInstance().start(this@LoadingActivity)
         awaitClose()

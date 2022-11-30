@@ -1,5 +1,6 @@
 package com.colive.or.viewModel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -41,7 +42,7 @@ class ViewModelFruitsClash(
 //                Log.d("data", getAdd.toString())
 //                Log.d("data", uId.toString())
 
-                MainApplication(applic, getAdd).tags(data?.get("campaign").toString(), deep)
+               MainApplication(applic, getAdd).tags(data?.get("campaign").toString(), deep)
 
                 dataF.postValue(
                         DataCreator.createData(
