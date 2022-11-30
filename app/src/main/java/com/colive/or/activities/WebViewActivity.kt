@@ -56,7 +56,7 @@ class WebViewActivity : AppCompatActivity() {
 
        webView.settings.userAgentString =  userAgent
 
-        webView.settings.loadWithOverviewMode = true
+        webView.settings.loadWithOverviewMode = false
        // webView.settings.userAgentString.replace("wv", "")
       //  webView.settings.allowFileAccess = true
 

@@ -23,16 +23,25 @@ class MainApplication(context: Context, gadid: String) : Application() {
 
     }
 
-    fun tags(deep: String, campaign: String) {
+    fun tags(  campaign: String, deep: String) {
 
+       // val tag = deep.replace("myapp://", "").substringBefore("/")
+       // Log.d("tag_final", tag.toString())
+       // val tag = deep.replace("myapp://", "").substringBefore("/")
+        //Log.d("tag_final", tag.toString())
         when {
+
             deep != "null" ->{
-                OneSignal.sendTag("key2",  deep.replace("myapp://", "").substringBefore("/"))
+                   OneSignal.sendTag("key2",  deep.replace("myapp://", "").substringBefore("/"))
+                //val tag = deep.replace("myapp://", "").substringBefore("/")
+                //Log.d("tag_final", tag.toString())
             }
             campaign != "null" -> {
-                OneSignal.sendTag("key2", campaign.substringBefore("_"))            }
-            deep != "null" && campaign != "null" -> {
+                OneSignal.sendTag("key2", campaign.substringBefore("_"))
+            }
+            deep == "null" && campaign == "null" -> {
                 OneSignal.sendTag("key2", "organic")
+
             }
 
         }

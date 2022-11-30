@@ -12,8 +12,7 @@ import java.io.File
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //  startActivity(Intent(this, LoadingActivity::class.java))
-
+        // startActivity(Intent(this, LoadingActivity::class.java))
 
 //        if (Settings.Global.getString(contentResolver,
 //                    Settings.Global.ADB_ENABLED) != "1" &&
@@ -31,18 +30,18 @@ class SplashScreenActivity : AppCompatActivity() {
 //            ).any { File(it).exists() } && Settings.Global.getString(contentResolver,
 //                Settings.Global.ADB_ENABLED) != "1" )
 //        {
-//        if (startWork()) {
+        if (startWork()) {
             startActivity(Intent(this, LoadingActivity::class.java))
 
           //  Log.d("ADB_CHECK", "OK")
             finish()
-//        } else {
-//            startActivity(Intent(this, CreditsScreen::class.java))
-//
-//          //  Log.d("ADB_CHECK", "FAIL")
-//
-//            finish()
-//        }
+        } else {
+            startActivity(Intent(this, CreditsScreen::class.java))
+
+          //  Log.d("ADB_CHECK", "FAIL")
+
+            finish()
+        }
 
     }
 

@@ -14,7 +14,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-
+import com.colive.or.MainApplication
 
 class ViewModelFruitsClash(
     private val applic : App,
@@ -42,7 +42,7 @@ class ViewModelFruitsClash(
 //                Log.d("data", getAdd.toString())
 //                Log.d("data", uId.toString())
 
-               MainApplication(applic, getAdd).tags(data?.get("campaign").toString(), deep)
+                MainApplication(applic, getAdd).tags(data?.get("campaign").toString(), deep)
 
                 dataF.postValue(
                         DataCreator.createData(
