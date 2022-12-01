@@ -19,7 +19,7 @@ import com.colive.or.data.FileCreatorFruitsClash
 import com.colive.or.R
 import com.google.android.material.snackbar.Snackbar
 
-const val userAgent= "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.61 Mobile Safari/537.36"
+//const val userAgent= "Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.61 Mobile Safari/537.36"
 class WebViewActivity : AppCompatActivity() {
     private lateinit var webView: WebView
 //    val REQUEST_SELECT_FILE = 100
@@ -54,7 +54,11 @@ class WebViewActivity : AppCompatActivity() {
 //           Log.d("WEB_VIEW", "WebView Fail")
 //        }
 
-       webView.settings.userAgentString =  userAgent
+//       webView.settings.userAgentString.
+       val userAgent =  WebView(this).settings.userAgentString.replace("wv", "")
+          webView.settings.userAgentString = userAgent
+
+        Log.d("user_agent", userAgent.toString() )
 
         webView.settings.loadWithOverviewMode = false
        // webView.settings.userAgentString.replace("wv", "")
@@ -156,6 +160,8 @@ class WebViewActivity : AppCompatActivity() {
                     if (webView.canGoBack()) {
                         webView.goBack()
                     }
+                     
+
                 }
             })
     }

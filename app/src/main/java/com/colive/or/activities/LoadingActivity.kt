@@ -70,8 +70,8 @@ class   LoadingActivity : AppCompatActivity() {
     }
     private fun deepFlow(): Flow<String> = callbackFlow {
         val callback = AppLinkData.CompletionHandler {
-            trySendBlocking(it?.targetUri.toString())
-          // trySendBlocking("myapp://test1/test!2/test-3/test 4/test5/test6")
+          trySendBlocking(it?.targetUri.toString())
+       //   trySendBlocking("myapp://test1/test!2/test-3/test 4/test5/test6")
         }
         AppLinkData.fetchDeferredAppLinkData(this@LoadingActivity, callback)
         awaitClose()

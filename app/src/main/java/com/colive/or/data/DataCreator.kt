@@ -15,7 +15,7 @@ companion object{
         gadid: String,
         data: Apps?,
         deep: String,
-        uid: String
+        uid: String?
     ): String {
         val pref = "https://"
 

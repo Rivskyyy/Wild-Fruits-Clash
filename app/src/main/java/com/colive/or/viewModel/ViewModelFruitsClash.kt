@@ -37,22 +37,27 @@ class ViewModelFruitsClash(
                 val getAdd = AdvertisingIdClient.getAdvertisingIdInfo(applic).id.toString()
                 val uId = AppsFlyerLib.getInstance().getAppsFlyerUID(applic)
 
-//                Log.d("data", data.toString())
-//                Log.d("data", deep.toString())
-//                Log.d("data", getAdd.toString())
-//                Log.d("data", uId.toString())
+//                  Log.d("data", data.toString())
+//                  Log.d("data", deep.toString())
+//                  Log.d("data", getAdd.toString())
+//                   Log.d("data", uId.toString())
 
                 MainApplication(applic, getAdd).tags(data?.get("campaign").toString(), deep)
 
                 dataF.postValue(
+
                         DataCreator.createData(
                             res = applic.resources, baseData = FileCreatorFruitsClash.BASE,
                             gadid = getAdd,
                             data = if (deep == "null") data else null,
-                            deep = deep, uid = uId!!
+                            deep = deep, uid = if (deep != "null")  null else uId
 
                         )
                 )
+//                val uId_test  = if ( deep != "null") null else uId
+//                Log.d("data_changed_test", uId_test.toString())
+               // Log.d("data_uid", uId = if ( deep ! = "null") null else uId )
+
 
             }
         }

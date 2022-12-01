@@ -12,8 +12,8 @@ import java.io.File
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // startActivity(Intent(this, LoadingActivity::class.java))
-
+//        startActivity(Intent(this, LoadingActivity::class.java))
+//        finish()
 //        if (Settings.Global.getString(contentResolver,
 //                    Settings.Global.ADB_ENABLED) != "1" &&
 //            arrayOf(
