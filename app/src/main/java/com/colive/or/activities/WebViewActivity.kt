@@ -5,20 +5,16 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.os.Message
-import android.util.Log
 import android.webkit.*
 import android.widget.Toast
-
 import androidx.activity.OnBackPressedCallback
-import androidx.activity.result.ActivityResult
-import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.colive.or.App
-import com.colive.or.data.FileCreatorFruitsClash
 import com.colive.or.R
 import com.google.android.material.snackbar.Snackbar
-const val BASE_LINK = "https://wildfruitsclash.today/"
+
+//const val BASE_LINK = "wildfruitsclash.today/"
 //const val userAgent= "Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.61 Mobile Safari/537.36"
 class WebViewActivity : AppCompatActivity() {
     private lateinit var webView: WebView
@@ -34,13 +30,14 @@ class WebViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_web_view)
 
+        val BASE_LINK = "https://wildfruitsclash.today/"
         webView = findViewById(R.id.webView)
+        //    val pref = "https://"
 
-   //webView.loadUrl("wildfruitsclash.today/")
 
         CookieManager.getInstance().setAcceptCookie(true)
         CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true)
-
+      //  webView.loadUrl("https://wildfruitsclash.today/")
         intent.getStringExtra(
             "fruits_data")?.let {
             webView.loadUrl(it)
@@ -55,9 +52,9 @@ class WebViewActivity : AppCompatActivity() {
 //       webView.settings.userAgentString.
        val userAgent =  WebView(this).settings.userAgentString.replace("wv", "")
           webView.settings.userAgentString = userAgent
-    val newUrl =  FileCreatorFruitsClash.BASE.substringBefore("/")
-
-       Log.d("newUrl", newUrl.toString() )
+//    val newUrl =  FileCreatorFruitsClash.BASE.substringBefore("/")
+//
+//       Log.d("newUrl", newUrl.toString() )
 
         webView.settings.loadWithOverviewMode = false
        // webView.settings.userAgentString.replace("wv", "")
@@ -69,6 +66,8 @@ class WebViewActivity : AppCompatActivity() {
         webView.settings.allowContentAccess = true
         webView.settings.allowFileAccess = true
 
+
+
         webView.webViewClient = object : WebViewClient() {
             override fun onReceivedError(
                 view: WebView,
@@ -76,24 +75,30 @@ class WebViewActivity : AppCompatActivity() {
                 error: WebResourceError
             ) {
                 super.onReceivedError(view, request, error)
-                Snackbar.make(view, error.description, Snackbar.LENGTH_LONG).show()
+               Snackbar.make(view, error.description, Snackbar.LENGTH_LONG).show()
             }
 
             override fun onPageFinished(view: WebView, url: String) {
                 super.onPageFinished(view, url)
-                CookieManager.getInstance().flush()
-
+               CookieManager.getInstance().flush()
+                //FileCreatorFruitsClash.BASE.substringBefore("/") == BASE_LINK
 //                FileCreatorFruitsClash.BASE.substringBefore("/") == url
-                    // BASE_LINK = "https://wildfruitsclash.today/"
+                    // BASE_LINK = "https://wildfruitsclash.today"
 
                 if  (BASE_LINK == url) {
 
                     startActivity(Intent(this@WebViewActivity, CreditsScreen::class.java))
+//                    val intent = Intent(this@WebViewActivity, CreditsScreen::class.java)
+//                    startActivity(intent)
                     finish()
+
+
                 } else {
-                    Log.d("base_url", "FALSE")
-                 val url =  (application as App).file.writeData(url)
+                    // Log.d("base_url", "FALSE")
+                    (application as App).file.writeData(url)
                 }
+
+
             }
 
         }
@@ -116,6 +121,7 @@ class WebViewActivity : AppCompatActivity() {
 
                 newWebView.webChromeClient = this
 
+                newWebView.settings.loadWithOverviewMode = false
 
                 val transport = resultMsg.obj as WebView.WebViewTransport
                 transport.webView = newWebView

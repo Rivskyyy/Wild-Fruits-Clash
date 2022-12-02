@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import com.colive.or.R
+import kotlinx.coroutines.Dispatchers.Main
 
 class CreditsScreen : AppCompatActivity() {
 
@@ -14,6 +15,11 @@ class CreditsScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_credits_screen)
+
+
+        fun isClicked(){
+            onBackPressed()
+        }
 
         window.statusBarColor = getColor(R.color.statusBarInCreditsActivity)
 
@@ -42,6 +48,13 @@ class CreditsScreen : AppCompatActivity() {
 
             startActivity(intent)
 
+
         }
+    }
+
+    override fun onBackPressed() {
+
+        super.onBackPressed()
+        finish()
     }
 }
