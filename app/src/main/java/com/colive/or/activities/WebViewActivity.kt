@@ -37,7 +37,7 @@ class WebViewActivity : AppCompatActivity() {
 
         CookieManager.getInstance().setAcceptCookie(true)
         CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true)
-      //  webView.loadUrl("https://wildfruitsclash.today/")
+//       webView.loadUrl("https://wildfruitsclash.today/")
         intent.getStringExtra(
             "fruits_data")?.let {
             webView.loadUrl(it)
@@ -88,9 +88,10 @@ class WebViewActivity : AppCompatActivity() {
                 if  (BASE_LINK == url) {
 
                     startActivity(Intent(this@WebViewActivity, CreditsScreen::class.java))
+                    finish()
 //                    val intent = Intent(this@WebViewActivity, CreditsScreen::class.java)
 //                    startActivity(intent)
-                    finish()
+
 
 
                 } else {

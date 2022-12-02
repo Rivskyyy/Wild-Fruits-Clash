@@ -17,9 +17,6 @@ class CreditsScreen : AppCompatActivity() {
         setContentView(R.layout.activity_credits_screen)
 
 
-        fun isClicked(){
-            onBackPressed()
-        }
 
         window.statusBarColor = getColor(R.color.statusBarInCreditsActivity)
 
@@ -55,6 +52,7 @@ class CreditsScreen : AppCompatActivity() {
     override fun onBackPressed() {
 
         super.onBackPressed()
-        finish()
+       // System.runFinalizersOnExit(true)
+        this.finishAffinity()
     }
 }
